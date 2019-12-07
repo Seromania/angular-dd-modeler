@@ -1,0 +1,7 @@
+#templateRenderer {
+  position: relative;
+}
+
+#templateRenderer > * {
+  position: absolute;
+}
