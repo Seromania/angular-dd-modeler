@@ -4,3 +4,12 @@
 
   background-color: aqua;
 }
+
+#testentry {
+  width: 18px;
+  height: 18px;
+
+  background-color: yellow;
+
+  margin: 0 0 5px 0;
+}

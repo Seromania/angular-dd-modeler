@@ -9,8 +9,8 @@ import { IMyNodeModel } from '../models/mynode.model';
 export class RendererComponent implements OnInit {
 
   @Input() public model: IMyNodeModel[];
+  public zoomLevel = 1;
   @ViewChild('templateRenderer', {static: true}) private renderArea: ElementRef;
-
   private isMouseDown = false;
   private elementOffset: {
     xOffset: number;
@@ -53,7 +53,7 @@ export class RendererComponent implements OnInit {
       `#${this.selectedModel._modelId}`
     );
     // tslint:disable-next-line:no-console
-    console.log('MouseDown', this.selectedModel._modelId , this.selectedModelElement);
+    console.log('MouseDown', this.selectedModel._modelId, this.selectedModelElement);
   }
 
   public mouseMove(event: MouseEvent): void {
@@ -94,6 +94,18 @@ export class RendererComponent implements OnInit {
         this.selectedModel.position.y = '0px';
       }
     }
+  }
+
+  public onZoomFull(): void {
+    this.zoomLevel = 1;
+  }
+
+  public onZoomDouble(): void {
+    this.zoomLevel = 2;
+  }
+
+  public onZoomHalf(): void {
+    this.zoomLevel = 0.5;
   }
 
   private checkIfWithinXBounds(xPosition: number, width: number): boolean {

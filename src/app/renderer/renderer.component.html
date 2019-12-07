@@ -1,3 +1,6 @@
+<button (click)="onZoomFull()">Zoom 100%</button>
+<button (click)="onZoomDouble()">Zoom 200%</button>
+<button (click)="onZoomHalf()">Zoom 50%</button>
 <div #templateRenderer
      id="templateRenderer"
      style="width: 100%; height: 400px; background: green;"
@@ -10,13 +13,17 @@
       [model]="templateModel"
       (mousedown)="mouseDown($event, templateModel)"
       [style.left]="templateModel.position.x"
-      [style.top]="templateModel.position.y"></app-default-functionblock-node>
+      [style.top]="templateModel.position.y"
+      [style.transform]="'scale(' + zoomLevel + ')'"
+      ></app-default-functionblock-node>
     <app-counter-functionblock-node
       id="{{'model_' + i}}"
+      *ngIf="templateModel.category === 'test'"
       [model]="templateModel"
       (mousedown)="mouseDown($event, templateModel)"
       [style.left]="templateModel.position.x"
       [style.top]="templateModel.position.y"
-      *ngIf="templateModel.category === 'test'"></app-counter-functionblock-node>
+      [style.transform]="'scale(' + zoomLevel + ')'"
+      ></app-counter-functionblock-node>
   </ng-container>
 </div>
