@@ -1,15 +1,120 @@
-#functionblockBody {
-  width: 256px;
-  height: 158px;
+#functionblockNode {
+  width: 258px;
+  min-height: 156px;
+  height: auto;
 
-  background-color: aqua;
+  background-color: #434343;
+
+  position: relative;
 }
 
-#testentry {
-  width: 18px;
-  height: 18px;
+#functionblockHeader {
+  width: 100%;
+  height: 30px;
 
-  background-color: yellow;
+  background-color: #555555;
 
-  margin: 0 0 5px 0;
+  display: table;
+  position: relative;
+}
+
+#functionblockHeader .fbHeaderText {
+  display: table-cell;
+  vertical-align: bottom;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+#functionblockBody {
+  position: absolute;
+  width: 100%;
+
+  top: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #555555;
+}
+
+#functionblockBody .centerBody {
+  position: absolute;
+
+  background-color: #434343;
+  left: 2px;
+  right: 2px;
+  top: 0;
+  bottom: 2px;
+}
+
+#functionblockBody .counterInformations {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+
+  height: 55px;
+}
+
+#functionblockBody .counterInformations .currentValue {
+  position: relative;
+  top: 0;
+  left: 40px;
+
+  width: 70%;
+
+  height: 25px;
+
+  background-color: #555555;
+  border-radius: 3px;
+
+  margin-top: 5px;
+
+  display: table;
+}
+
+#functionblockBody .counterInformations .resetValue {
+  position: relative;
+  top: 0;
+  left: 80px;
+
+  width: 50px;
+}
+
+#functionblockBody .counterInformations .currentValue span {
+  display: table-cell;
+  vertical-align: bottom;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+#functionblockBody .inputPorts {
+  position: absolute;
+
+  left: 0;
+  right: 50%;
+  /*top: 100px;*/
+  bottom: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+
+#functionblockBody .outputPorts {
+  position: absolute;
+
+  right: 0;
+  /*top: 100px;*/
+  bottom: 0;
+  left: 50%;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }

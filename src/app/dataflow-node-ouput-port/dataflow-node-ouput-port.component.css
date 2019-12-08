@@ -1,0 +1,38 @@
+#outputPort {
+  position: relative;
+
+  width: auto;
+  height: 22px;
+
+  background-color: transparent;
+
+  clip-path: fill-box;
+
+  margin-bottom: 5px;
+}
+
+#outputPort .inner {
+  position: absolute;
+
+  right: 0;
+
+  width: 18px;
+  height: 18px;
+
+
+  background-color: orange;
+
+  border-radius: 9px;
+  border: 2px solid gray;
+
+  transform: translateX(9px);
+}
+
+#outputPort .portName {
+  position: absolute;
+  right: 20px;
+  top: 2px;
+
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}

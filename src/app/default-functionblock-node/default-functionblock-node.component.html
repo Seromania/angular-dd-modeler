@@ -1,3 +1,16 @@
-<div id="functionblockBody">
-  <span>Testvariable: {{model.test}}</span>
+<div id="functionblockNode">
+  <div id="functionblockHeader"><span class="fbHeaderText">{{model.test}}</span></div>
+  <div id="functionblockBody">
+    <div class="centerBody"></div>
+    <div class="inputPorts">
+      <app-dataflow-node-input-port
+        *ngFor="let port of model.arrayTest"
+        [portName]="port.arrayText"></app-dataflow-node-input-port>
+    </div>
+    <div class="outputPorts">
+      <app-dataflow-node-ouput-port
+        *ngFor="let port of model.arrayTest"
+        [portName]="port.arrayText"></app-dataflow-node-ouput-port>
+    </div>
+  </div>
 </div>

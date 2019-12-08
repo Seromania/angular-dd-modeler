@@ -16,4 +16,7 @@ export class CounterFunctionblockNodeComponent extends DataflowNodeComponent imp
     super.ngOnInit();
   }
 
+  public onResetClicked(): void {
+    console.log('RESET CLICKED!!');
+  }
 }

@@ -24,7 +24,14 @@ export class AppComponent {
         x: '100px',
         y: '0px'
       },
-      arrayTest: []
+      arrayTest: [
+        {
+          arrayText: '1'
+        },
+        {
+          arrayText: '2'
+        }
+      ]
     },
     {
       test: 'Angular 3',

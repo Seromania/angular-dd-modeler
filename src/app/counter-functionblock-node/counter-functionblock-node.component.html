@@ -1,6 +1,24 @@
-<div id="functionblockBody">
-  <p>Test: {{model.test}}</p>
-  <div id="test" *ngFor="let arrayEntry of model.arrayTest">
-    <div id="testentry">{{arrayEntry.arrayText}}</div>
+<div id="functionblockNode">
+  <div id="functionblockHeader"><span class="fbHeaderText">{{model.test}}</span></div>
+  <div id="functionblockBody">
+    <div class="centerBody"></div>
+    <div class="counterInformations">
+      <div class="currentValue">
+        <span>27d 12h 32m 12s</span>
+      </div>
+      <div class="resetValue">
+        <button (click)="onResetClicked()">RESET</button>
+      </div>
+    </div>
+    <div class="inputPorts">
+      <app-dataflow-node-input-port
+        *ngFor="let port of model.arrayTest"
+        [portName]="port.arrayText"></app-dataflow-node-input-port>
+    </div>
+    <div class="outputPorts">
+      <app-dataflow-node-ouput-port
+        *ngFor="let port of model.arrayTest"
+        [portName]="port.arrayText"></app-dataflow-node-ouput-port>
+    </div>
   </div>
 </div>

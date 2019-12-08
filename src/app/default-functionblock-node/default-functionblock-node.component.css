@@ -1,6 +1,76 @@
-#functionblockBody {
+#functionblockNode {
   width: 258px;
-  height: 156px;
+  min-height: 156px;
+  height: auto;
 
-  background-color: #4f4f4f;
+  background-color: #434343;
+
+  position: relative;
+}
+
+#functionblockHeader {
+  width: 100%;
+  height: 30px;
+
+  background-color: #555555;
+
+  display: table;
+  position: relative;
+}
+
+#functionblockHeader .fbHeaderText {
+  display: table-cell;
+  vertical-align: bottom;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+#functionblockBody {
+  position: absolute;
+  width: 100%;
+
+  top: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #555555;
+}
+
+#functionblockBody .centerBody {
+  position: absolute;
+
+  background-color: #434343;
+  left: 2px;
+  right: 2px;
+  top: 0;
+  bottom: 2px;
+}
+
+#functionblockBody .inputPorts {
+  position: absolute;
+
+  left: 0;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+
+#functionblockBody .outputPorts {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
